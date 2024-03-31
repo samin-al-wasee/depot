@@ -3,11 +3,29 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: test/fixtures/products/generic.jpg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: test/fixtures/products/generic.jpg
   price: 9.99
+
+the_pragmatic_programmer:
+  title: The Pragmatic Programmer
+  description: "The Pragmatic Programmer: From Journeyman to Master is a book about computer programming and software engineering, written by Andrew Hunt and David Thomas and published in October 1999. It is used as a textbook in related university courses."
+  image_url: test/fixtures/products/the-pragmatic-programmer.jpg
+  price: 29.99
+
+the_ruby_on_rails_tutorial:
+  title: The Ruby on Rails Tutorials
+  description: The Ruby on Rails Tutorials is a book by Michael Hartl that teaches web development with Ruby on Rails. The book is available online and is available for purchase as a PDF optimized for e-readers.
+  image_url: test/fixtures/products/the-ruby-on-rails-tutorials.png
+  price: 39.99
+
+programming_ruby_3.2:
+  title: Programming Ruby 3.2
+  description: "Programming Ruby 3.2: The Pragmatic Programmer's Guide is a book by Dave Thomas, with Chad Fowler and Andy Hunt, and published in 2000 by the Pragmatic Bookshelf. The first edition is freely available online."
+  image_url: test/fixtures/products/programming-ruby-3.2.jpg
+  price: 49.99
