@@ -22,7 +22,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
       post line_items_url, params: { product_id: products(:programming_ruby_3_2).id }
     end
 
-    assert_redirected_to cart_url(LineItem.last.cart)
+    assert_redirected_to store_index_url
 
     follow_redirect!
 
@@ -56,5 +56,15 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     follow_redirect!
 
     assert_select 'h1', 'Line items'
+  end
+
+  test 'should create line_item via turbo-stream' do
+    assert_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:programming_ruby_3_2).id }, as: :turbo_stream
+    end
+
+    assert_response :success
+    assert_select 'turbo-stream[action="replace"][target="cart"]'
+    assert_match(/<tr class="line-item-highlight">/, @response.body)
   end
 end
